@@ -1,28 +1,19 @@
-
 public void setup(){
-  size(600,600);
+  size(500,500);
 }
 
-public void draw()
-{
-  background(0);
-  myFractal(250, 250, 380);
+public void draw(){
+  background(255, 255, 102);
+  myFractal(330,250,300);
 }
 
-public void myFractal(int x, int y, int size){
-  if(size < 30)
-    ellipse(x,y,size,size);
-  else{
-    myFractal(x,y,size/2);
-    fill(179, 224, 255);
-    myFractal(x+size/2, y, size/4);
-    fill(255,255,255);
-    myFractal(x-size/2, y, size/2);
-    fill(179, 224, 255);
-    myFractal(x+size/2, y+size/2, size/2);
-    fill(255,255,255);
-    myFractal(x-size/2, y-size/2, size/2);
-    myFractal(x-size/4, y+size/4, size-50);
- 
-  } 
+public void myFractal(int x, int y, int siz){
+   ellipse(x,y,siz,siz);
+   if(siz > 5)
+   {
+      fill(255, 230, 179);
+      myFractal(x-siz/10, y-siz/10, siz/2); 
+      myFractal(x-siz/2,y,siz/2);
+      myFractal(x-siz/5, y+siz/5,siz/2);
+   }
 }
