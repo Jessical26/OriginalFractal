@@ -3,7 +3,7 @@ public void setup(){
 }
 
 public void draw(){
-  background(255, 255, 102);
+  background(0, 153, 204);
   myFractal(330,250,300);
 }
 
